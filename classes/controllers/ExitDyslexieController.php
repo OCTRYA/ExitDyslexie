@@ -1,19 +1,31 @@
 <?php
-include '../../classes/ExitDyslexie.php';
-
-
-if(!empty($_POST['amountOfExercisesInput']) && !empty($_POST['amountOfLettersInput']) && !empty($_POST['difficultyOfExercisesInput']))
-{
-    $exitDyslexie = new ExitDyslexie($_POST['amountOfExercisesInput'],$_POST['amountOfLettersInput'],$_POST['difficultyOfExercisesInput']);
-    echo $exitDyslexie->getStatus();
-    $exercise = $exitDyslexie->makeExercise1();
+include 'classes/ExitDyslexie.php';
+class ExitDyslexieController{
+    public function drawDyslexieExercise($amountOfExcercisesInput,$amountOfLettersInput,$difficultyOfExercisesInput){
+        if(!empty($amountOfExcercisesInput) && !empty($amountOfLettersInput) && !empty($difficultyOfExercisesInput)){
+            $exitDyslexie = new ExitDyslexie($amountOfExcercisesInput,$amountOfLettersInput,$difficultyOfExercisesInput);
+            $exercise = $exitDyslexie->makeExercise1();
+            $amountOfCols = $this->calculateAmountOfCols($amountOfExcercisesInput);
+            echo '<div class="container">';
+            for($i = 0; $i < sizeOf($exercise); $i+=$amountOfCols){
+                echo '<div class="row ">';
+                for($j = 0; $j < $amountOfCols; $j++){
+                    if($i+$j < $amountOfExcercisesInput){
+                        echo '<div class="toRead col-sm-2">'. $exercise[$i+$j]->getValue() . '</div>';
+                    }                  
+                }
+                echo '</div>';
+            }   
+            echo "</div>";
+            } else {
     
-    echo "<table>";
-    for($i = 0; $i < sizeOf($exercise); $i++){
-        echo "<tr><td>". $exercise[$i]->getValue() . "</td></tr>";
-    }   
-    echo "</table>";
-} else {
+            }
+    }
     
+    
+    public function calculateAmountOfCols($amountOfExcercisesInput){
+        return ceil($amountOfExcercisesInput/15);
+    }
 }
+
 ?>

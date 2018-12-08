@@ -33,31 +33,49 @@ include 'classes/controllers/ExitDyslexieController.php';
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="index.php">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="contact.php">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 <!-- END HEADER -->
 
-<div class="container-fluid">
- <div class="row">
- </div>  
- <div class="row">
- 	<div class="col-lg-6">
-     	<form name='form' method='post' action="#">
-     	<table>
-        <tr><td>Geef het aantal oefeningen: </td><td><input type="text" name="amountOfExercisesInput" id="amountOfExercisesInput"/></td></tr>
-        <tr><td>Geef het aantal letter in (2-26): </td><td><input type="text" name="amountOfLettersInput" id="amountOfLettersInput"/></td></tr>
-        <tr><td>Geef de moeilijkheidsgraad in (1-5): </td><td><input type="text" name="difficultyOfExercisesInput" id="difficultyOfExercisesInput"/></td></tr>
-        <tr><td><input type="submit" class="btn btn-primary" name="submit" value="Submit"> </td></tr>
-        </table></form>
- 	</div>
- 
- </div>
- <div id="toRead">
+<div class="container">
+
+<div class="form-sec">
+  <h4>Contact form</h4>
+  
+ <form name="qryform" id="qryform" method="post" action="mail.php" onsubmit="return(validate());" novalidate="novalidate">
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+    </div>
+    <div class="form-group">
+      <label>Email:</label>
+      <input type="email" class="form-control" id="name" placeholder="Enter Email" name="email">
+    </div>
+    
+    <div class="form-group">
+      <label>Phone No.:</label>
+      <input type="text" class="form-control" id="phone" placeholder="Enter Phone no." name="phone">
+    </div>
+	<div class="form-group">
+      <label>Subject:</label>
+      <input type="text" class="form-control" id="name" placeholder="Subject" name="subject">
+    </div>
+	 
+	<div class="form-group">
+      <label>Issues/query:</label>
+      <textarea name="issues" class="form-control" id="iq" placeholder="Enter your Issues/query"></textarea>
+    </div>
+	
+    
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+  </div>
+  </div>
  <?php
     if(isset($_REQUEST['submit']))
     {       
@@ -67,7 +85,6 @@ include 'classes/controllers/ExitDyslexieController.php';
 ?>
  
  
- </div>  
 </div>
 
 
