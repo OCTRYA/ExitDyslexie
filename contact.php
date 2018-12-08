@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'classes/controllers/ExitDyslexieController.php';
 ?>
 
@@ -42,7 +42,7 @@ include 'classes/controllers/ExitDyslexieController.php';
     </nav>
 <!-- END HEADER -->
 
-<div class="container">
+<div class="container contactContainer">
 
 <div class="form-sec">
   <h4>Contact form</h4>
@@ -83,12 +83,8 @@ include 'classes/controllers/ExitDyslexieController.php';
         $exitDyslexieController->drawDyslexieExercise($_POST['amountOfExercisesInput'],$_POST['amountOfLettersInput'],$_POST['difficultyOfExercisesInput']);
     }
 ?>
- 
- 
+
 </div>
-
-
-
 
 </body>
 
