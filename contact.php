@@ -18,7 +18,7 @@ include 'classes/controllers/ExitDyslexieController.php';
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         
 </head>
-<body>
+<body class="contactContainer">
 <!--  Header -->
     <nav class="navbar navbar-inverse">
       <div class="container">
@@ -33,7 +33,7 @@ include 'classes/controllers/ExitDyslexieController.php';
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.php">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="contact.php">Contact</a></li>
           </ul>
@@ -42,13 +42,14 @@ include 'classes/controllers/ExitDyslexieController.php';
     </nav>
 <!-- END HEADER -->
 
-<div class="container contactContainer">
+<div class="container">
 
 <div class="form-sec">
-  <h4>Contact form</h4>
+
   
  <form name="qryform" id="qryform" method="post" action="mail.php" onsubmit="return(validate());" novalidate="novalidate">
-    <div class="form-group">
+   <h4>Contact form</h4>
+      <div class="form-group">
       <label>Name:</label>
       <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
     </div>

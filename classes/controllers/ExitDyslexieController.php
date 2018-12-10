@@ -1,5 +1,5 @@
 <?php
-include 'classes/ExitDyslexie.php';
+include 'classes/rebootSchool/rebootReading/ExitDyslexie.php';
 class ExitDyslexieController{
     public function drawDyslexieExercise($amountOfExcercisesInput,$amountOfLettersInput,$difficultyOfExercisesInput){
         if(!empty($amountOfExcercisesInput) && !empty($amountOfLettersInput) && !empty($difficultyOfExercisesInput)){
