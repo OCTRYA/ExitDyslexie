@@ -4,7 +4,14 @@ html{
 
 body{
 	font-family:"arial";
+}
 
+.assignment{
+    font-size:1.5em;
+}
+
+.solution{
+	width:50px
 }
 
 .contactContainer {
@@ -18,7 +25,7 @@ body{
 	background-size: cover;
 }
 
-form{ 
+.form{ 
 	padding:2px;
  	max-width: 500px;
     padding: 10px 20px;
@@ -30,8 +37,32 @@ form{
 box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
 }
 
+.result{font-size: 18px; color:red}
+
 .toRead {
 	font-size:50px;
 	text-align:center;	
 }
 
+.controleContainer{	background-color:none;
+					min-height:200px;
+					text-shadow: none;
+					-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+					-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+					box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+					border-radius: 25px;
+  					border: 2px solid #101010;
+  					margin-right:2px;
+  					}
+ .exerciseContainer{	background-color:none;
+						min-height:200px;
+						text-shadow: none;
+						-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+						-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+						box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+						border-radius: 25px;
+	  					border: 2px solid #101010;
+	  					margin-left:2px;
+	  					margin-right:-4px
+ 
+ }
