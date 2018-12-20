@@ -1,5 +1,4 @@
 <?php
-namespace classes\rebootSchool;
 
 class Path
 {
@@ -10,7 +9,10 @@ class Path
     private $exerciseManager;
     
     
-    
+    public function __construct($level){
+        $this->pathGenerator = new PathGenerator($level);
+        $this->exerciseManager = new ExerciseManager();
+    }
     
     
     public function getReport(){
