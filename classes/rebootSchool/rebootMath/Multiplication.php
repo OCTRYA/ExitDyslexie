@@ -1,46 +1,38 @@
 <?php
-namespace classes\rebootSchool\rebootMath;
+require "classes/rebootSchool/rebootMath/SingleExercise.php";
 
-class MultiplicationExercise implements \SingleExercise
+class Multiplication implements \SingleExercise
 {
-    
     private $level;
-    private $operation;
+    private $singleExercise;
     private $figure;
     private $userResult;
     
-    /**
-     * Constructor
-     */
-    public function __construct() {
-        // allocate your stuff
+    
+    
+    public function createSimpleExercise($multiplicationTable, $index){
+        $this->figure = $index;
+        $singleExercise = new Multiplication();
+        $singleExercise->setFigure($multiplicationTable);
+        $singleExercise->setSingleExercise(null);
+        $this->singleExercise = $singleExercise;
     }
     
-    /**
-     * Static constructor / factory
-     */
-    public static function create() {
-        $instance = new self();
-        return $instance;
+    public function createRandomExercise($limitation){
+        $this->figure = $limitation;
+        $secondValue = rand(0,10);
+        $singleExercise = new Multiplication();
+        $singleExercise->setFigure($secondValue);
+        $singleExercise->setSingleExercise(null);
+        $this->singleExercise = $singleExercise;
     }
     
-    public static function createAMultiplication($operation,$figure){
-        $instance=new self();
-        if(is_numeric($operation)){
-            $instance->operation = MultiplicationExercise::createAMultiplication(null,$operation);
-        }
-        else{
-            $instance->operation = $operation;
-        }
-        $instance->figure = $figure;
-        return $instance;
-    }
-
+    
     public function getSolution(){
-        if(is_null($this->operation)){
+        if(is_null($this->singleExercise)){
             return $this->figure;
         } else {
-            return $this->operation->calculateExcercise()* $this->figure;
+            return $this->singleExercise->getSolution()* $this->figure;
         }
     }
     
@@ -57,10 +49,28 @@ class MultiplicationExercise implements \SingleExercise
         return $this->userResult;
     }
     
-    public function getOperation()
-    {
+    public function setUserResult($result){
+        $this->userResult = $result;
+    }
+    
+    
+    public function setSingleExercise($singleExercise){
+        $this->singleExercise = $singleExercise;
+    }
+    
+    public function getFigure(){
+        return $this->figure;
         
     }
     
-}
+    public function setFigure($figure){
+        $this->figure = $figure;
+    }
+    
+    public function getSingleExercise(){
+        return $this->singleExercise;
+    }
+    
 
+}
+?>

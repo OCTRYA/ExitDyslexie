@@ -9,7 +9,7 @@ class Addition implements \SingleExercise
     private $userResult;
     
     
-    public function createSimpleExercise($limitation){
+    public function createRandomExercise($limitation){
         $this->figure = rand(0,$limitation);
         $secondValue = rand(0,$limitation-$this->figure);
         $singleExercise = new Addition();
