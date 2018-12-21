@@ -22,6 +22,7 @@
     		<li><a href="rekenen0.php?limitation=20&amountOfExercises=10">Rekenen tot 20</a></li>
     		<li>Rekenen tot <br/><form method="get" action="rekenen0.php?amountOfExercises=10"><input type="text" onkeypress="return isNumberKey(event)" name="limitation"/><input type="hidden" name="amountOfExercises" value="10" /><button type="submit" class="btn btn-primary">Start</button></form></li>
    	</ul>
+   	<div class="col-sm-6"></div>
    	<div class="row">
    		<div class="col-sm-5">
        		<ul>
