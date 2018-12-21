@@ -1,5 +1,5 @@
 <?php
-    include 'classes/rebootSchool/rebootMath/ExcerciseManager.php';
+    include 'classes/rebootSchool/rebootMath/ExerciseManager.php';
     include 'Template.php';
     require 'classes/rebootSchool/rebootMath/Multiplication.php';    
     session_start();
@@ -49,7 +49,7 @@
     	}
     }else{
     
-        $exerciseManager = new ExcerciseManager();
+        $exerciseManager = new ExerciseManager();
         $_SESSION["exerciseManager"] = $exerciseManager;
         $exerciseManager->setAmountOfExercises($_GET["amountOfExercises"]);
         $exerciseManager->setLimitation($_GET["limitation"]);

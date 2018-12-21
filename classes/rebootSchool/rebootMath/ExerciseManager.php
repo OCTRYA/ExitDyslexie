@@ -1,6 +1,7 @@
+
 <?php
 
-class ExcerciseManager
+class ExerciseManager
 {
     private $nameExercise;
     private $amountOfExercises;
