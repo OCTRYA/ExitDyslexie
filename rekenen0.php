@@ -23,7 +23,6 @@
 				</div>
 			
 				<div class="col-md-12 result">
-					Je hebt 5 van de 10 oefeningen juist
 				</div>
 			</form>
 			</div>
@@ -48,7 +47,7 @@
     	    echo " + ";
     	    echo $exerciseManager->getSingleExercises()[$i]->getSingleExercise()->getFigure();
     	    echo ' = </p></div><div class="col-sm-2">';
-    	    echo '<input name="exercise'. $i .'" value="' . $exerciseManager->getSingleExercises()[$i]->getUserResult() .'" class="form-control form-control-lg" onkeypress="return isNumberKey(event)" type="text">';
+    	    echo '<input name="exercise'. $i .'" value="' . $exerciseManager->getSingleExercises()[$i]->getUserResult() .'" class="form-control form-control-lg" onkeypress="return isNumberKey(event)" type="text" autocomplete="off">';
     	    echo '</div><span>'.Template::showCorrectnessExercise($exerciseManager->getSingleExercises()[$i]->isResultCorrect()).'</span></div>';
     	}
     }else{
@@ -69,7 +68,7 @@
             echo " + ";
             echo $addition->getSingleExercise()->getFigure();
             echo ' = </p></div><div class="col-sm-2">';
-            echo '<input name="exercise'. $i .'"  class="form-control form-control-lg" onkeypress="return isNumberKey(event)" type="text">';
+            echo '<input name="exercise'. $i .'"  class="form-control form-control-lg" onkeypress="return isNumberKey(event)" type="text" autocomplete="off">';
             echo '</div></div>';
             $_POST['update'] = 'true';
         }
@@ -91,7 +90,6 @@
     		
     	</div>
     </div>
-</div>
 
 
 

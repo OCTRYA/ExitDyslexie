@@ -1,7 +1,7 @@
 <?php
     include 'classes/rebootSchool/rebootMath/ExerciseManager.php';
     include 'Template.php';
-    require 'classes/rebootSchool/rebootMath/Multiplication.php';    
+    require 'classes/rebootSchool/rebootMath/Substraction.php';    
     session_start();
     require_once 'head.php';
     require_once 'header.php';
@@ -13,31 +13,18 @@
 	<div class="col-sm-3 controleContainer">
 		<div class="container-fluid">
 			<div class="row" style="margin-top:5px">
-			<form action="multiplication0.php" method="get" name="myForm">
+			<form action="rekenen0.php" method="get" name="myForm">
 				<div class="col-md-12">
-					<input name="limitation" class="form-control form-control-lg" type="text" placeholder="Vermenigvuldig tot ...">
+					<input name="limitation" class="form-control form-control-lg" type="text" placeholder="Aftrekkingen tot ...">
 					<input name="amountOfExercises" class="form-control form-control-lg" type="text" placeholder="Aantal nieuwe oefeningen">
 				</div>
 				<div class="col-md-12">
 					<button type="submit" class="btn btn-primary" style="float:right">Nieuwe reeks</button>
 				</div>
+			
+				<div class="col-md-12 result">
+				</div>
 			</form>
-			</div>
-			<div class="row">
-       			<h4>Tafels van vermenigvuldiging in volgorde</h4>
-			<ul>
-        		<li><a href="multiplication0.php?limitation=2&amountOfExercises=10">Tafel van 2</a></li>
-        		<li><a href="multiplication0.php?limitation=3&amountOfExercises=10">Tafel van 3</a></li>
-        		<li><a href="multiplication0.php?limitation=4&amountOfExercises=10">Tafel van 4</a></li>
-        		<li><a href="multiplication0.php?limitation=5&amountOfExercises=10">Tafel van 5</a></li>
-        		<li><a href="multiplication0.php?limitation=6&amountOfExercises=10">Tafel van 6</a></li>
-        		<li><a href="multiplication0.php?limitation=7&amountOfExercises=10">Tafel van 7</a></li>
-        		<li><a href="multiplication0.php?limitation=8&amountOfExercises=10">Tafel van 8</a></li>
-        		<li><a href="multiplication0.php?limitation=9&amountOfExercises=10">Tafel van 9</a></li>
-        		<li><a href="multiplication0.php?limitation=10&amountOfExercises=10">Tafel van 10</a></li>
-        		
-        		
-        	</ul>
 			</div>
 		</div>
 	</div>
@@ -52,12 +39,12 @@
         
         
         
-        echo '<h2>De tafel van vermenigvuldiging van ' . $exerciseManager->getLimitation() .'</h2>';
+        echo '<h2>Oefening optellen tot ' . $exerciseManager->getLimitation() .'</h2>';
     	echo '<div class="container">';
     	echo '<form method="post" action="' . htmlspecialchars($_SERVER["PHP_SELF"]) .'">';
     	for($i =0; $i< $exerciseManager->getAmountOfExercises();$i++){
     	    echo '<div class="row" id="calculateExercise' . $i . '" ><div class="col-sm-2"><p style="float:right">&nbsp;&nbsp;' . $exerciseManager->getSingleExercises()[$i]->getFigure();
-    	    echo " x ";
+    	    echo " - ";
     	    echo $exerciseManager->getSingleExercises()[$i]->getSingleExercise()->getFigure();
     	    echo ' = </p></div><div class="col-sm-2">';
     	    echo '<input name="exercise'. $i .'" value="' . $exerciseManager->getSingleExercises()[$i]->getUserResult() .'" class="form-control form-control-lg" onkeypress="return isNumberKey(event)" type="text" autocomplete="off">';
@@ -69,17 +56,17 @@
         $_SESSION["exerciseManager"] = $exerciseManager;
         $exerciseManager->setAmountOfExercises($_GET["amountOfExercises"]);
         $exerciseManager->setLimitation($_GET["limitation"]);
-        echo '<h2>De tafel van vermenigvuldiging van ' . $exerciseManager->getLimitation() . '</h2>';
+        echo '<h2>Oefening optellen tot ' . $exerciseManager->getLimitation() . '</h2>';
     	echo '<div class="container">';
         echo '<form method="post" action="' . htmlspecialchars($_SERVER["PHP_SELF"]) .'">';
         
         for($i =0; $i< $exerciseManager->getAmountOfExercises();$i++){
-            $multiplication = new Multiplication();
-            $multiplication->createSimpleExercise($exerciseManager->getLimitation(),$i+1);
-            $exerciseManager->addExercise($multiplication);
-            echo '<div class="row" id="calculateExercise' . $i . '" ><div class="col-sm-2"><p style="float:right">' . $multiplication->getFigure();
-            echo " x ";
-            echo $multiplication->getSingleExercise()->getFigure();
+            $substraction = new Substraction();
+            $substraction->createRandomExercise($exerciseManager->getLimitation());
+            $exerciseManager->addExercise($substraction);
+            echo '<div class="row" id="calculateExercise' . $i . '" ><div class="col-sm-2"><p style="float:right">' . $substraction->getFigure();
+            echo " - ";
+            echo $substraction->getSingleExercise()->getFigure();
             echo ' = </p></div><div class="col-sm-2">';
             echo '<input name="exercise'. $i .'"  class="form-control form-control-lg" onkeypress="return isNumberKey(event)" type="text" autocomplete="off">';
             echo '</div></div>';
