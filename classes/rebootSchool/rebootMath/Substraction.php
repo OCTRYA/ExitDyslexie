@@ -28,7 +28,7 @@ class Substraction implements \SingleExercise
     }
     
     public function isResultCorrect(){
-        if($this->getSolution() == $this->getUserResult()){
+        if($this->getSolution() == $this->getUserResult()&& $this->getUserResult()!=""){
             return true;
         }
         else {

@@ -30,6 +30,9 @@
     		<li><a href="aftrekking0.php?limitation=20&amountOfExercises=10">Aftrekken tot 20</a></li>
     		<li>Rekenen tot <br/><form method="get" action="aftrekking0.php?amountOfExercises=10"><input type="text" onkeypress="return isNumberKey(event)" name="limitation" autocomplete="off"/><input type="hidden" name="amountOfExercises" value="10" /><button type="submit" class="btn btn-primary">Start</button></form></li>
        	</ul>
+     </div>
+     <div class="row">
+     <div class="col-sm-6">
 		<h4>Tafels van Vermenigvuldiging</h4>
        	<ul>
         		<li><a href="multiplication0.php?limitation=2&amountOfExercises=10">Tafel van 2</a></li>
@@ -42,6 +45,21 @@
         		<li><a href="multiplication0.php?limitation=9&amountOfExercises=10">Tafel van 9</a></li>
         		<li><a href="multiplication0.php?limitation=10&amountOfExercises=10">Tafel van 10</a></li>
         	</ul>
+      </div>
+      <div class="col-sm-6">
+		<h4>De tafels door elkaar</h4>
+       	<ul>
+        		<li><a href="multiplication0.php?limitation=3&amountOfExercises=10&random=1">Tafel tot 2</a></li>
+        		<li><a href="multiplication0.php?limitation=4&amountOfExercises=10&random=1">Tafel tot 4</a></li>
+        		<li><a href="multiplication0.php?limitation=5&amountOfExercises=10&random=1">Tafel tot 5</a></li>
+        		<li><a href="multiplication0.php?limitation=6&amountOfExercises=10&random=1">Tafel tot 7</a></li>
+        		<li><a href="multiplication0.php?limitation=7&amountOfExercises=10&random=1">Tafel tot 8</a></li>
+        		<li><a href="multiplication0.php?limitation=8&amountOfExercises=10&random=1">Tafel tot 9</a></li>
+        		<li><a href="multiplication0.php?limitation=9&amountOfExercises=10&random=1">Tafel tot 10</a></li>
+        		<li>Vermenigvuldigen tot <br/><form method="get" action="multiplication0.php"><input type="text" onkeypress="return isNumberKey(event)" name="limitation" autocomplete="off"/><input type="hidden" name="amountOfExercises" value="10" /><input type="hidden" name="random" value="1" /><button type="submit" class="btn btn-primary">Start</button></form></li>
+        		
+        	</ul>
+      </div>
    	</div>
    	   	
     </div>

@@ -69,13 +69,18 @@
         $_SESSION["exerciseManager"] = $exerciseManager;
         $exerciseManager->setAmountOfExercises($_GET["amountOfExercises"]);
         $exerciseManager->setLimitation($_GET["limitation"]);
-        echo '<h2>De tafel van vermenigvuldiging van ' . $exerciseManager->getLimitation() . '</h2>';
+        echo '<h2>De tafel van vermenigvuldiging van/tot ' . $exerciseManager->getLimitation() . '</h2>';
     	echo '<div class="container">';
         echo '<form method="post" action="' . htmlspecialchars($_SERVER["PHP_SELF"]) .'">';
         
         for($i =0; $i< $exerciseManager->getAmountOfExercises();$i++){
             $multiplication = new Multiplication();
-            $multiplication->createSimpleExercise($exerciseManager->getLimitation(),$i+1);
+            if(!isset($_GET["random"]) || $_GET["random"]== 0){
+                $multiplication->createSimpleExercise($exerciseManager->getLimitation(),$i+1);
+            }else{
+                $multiplication->createRandomExercise(rand(2,$exerciseManager->getLimitation()),$i+1);
+            }
+            
             $exerciseManager->addExercise($multiplication);
             echo '<div class="row" id="calculateExercise' . $i . '" ><div class="col-sm-2"><p style="float:right">' . $multiplication->getFigure();
             echo " x ";

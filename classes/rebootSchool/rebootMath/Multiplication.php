@@ -19,8 +19,14 @@ class Multiplication implements \SingleExercise
     }
     
     public function createRandomExercise($limitation){
-        $this->figure = $limitation;
-        $secondValue = rand(0,10);
+        if($limitation<=10){
+            $this->figure = rand(0,10);
+        }
+        else{
+            $this->figure = rand(0,$limitation);
+        }
+        
+        $secondValue = $limitation;
         $singleExercise = new Multiplication();
         $singleExercise->setFigure($secondValue);
         $singleExercise->setSingleExercise(null);
@@ -37,7 +43,7 @@ class Multiplication implements \SingleExercise
     }
     
     public function isResultCorrect(){
-        if($this->getSolution() == $this->getUserResult()){
+        if($this->getSolution() == $this->getUserResult()&& $this->getUserResult()!=""){
             return true;
         }
         else {
