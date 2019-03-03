@@ -73,5 +73,22 @@
     </div><p>Deze optie is nog niet operationeel en wordt verwacht tegen september 2019</p>
     </div>
 </div>
+<div class="col-sm-6 exerciseContainer"> 
+   	
+    <h3>Sign up</h3>
+    <div>
+    	<p>Door je aan te melden op het systeem krijg je toegang tot heel wat ondersteuning. Je krijgt toegang tot de analyse van je resultaten, je kan je resulaten vergelijken met dit van medeleerlingen/studenten. Daarnaast worden je resultaten geanalyseerd en ontwikkeld het systeem een leerpad op maat</p>
+    	<form method="get" action="authenticaton.php">
+    		<input type="text" name="userName" placeholder="email"/><br/>
+    		<input type="text" name="username" placeholder="repeat email"/><br/>
+    		<input type="text" name="password" placeholder="password"/><br/>
+    		<input type="text" name="password" placeholder="repeat password"/><br/>
+    		<button type="submit" class="btn btn-primary">Sign up</button>
+    	
+    	</form>
+    	
+    </div><p>Deze optie is nog niet operationeel en wordt verwacht tegen september 2019</p>
+    </div>
+</div>
 
 <?php require_once 'bottom.php';?>

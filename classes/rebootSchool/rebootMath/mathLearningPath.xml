@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+<theme>
+	<nr>1</nr>
+	<name>Counting</name>
+	<subject>
+		<nr>1</nr>
+		<name>Count to 5</name>
+	</subject>
+	<subject>
+		<nr>2</nr>
+		<name>Count to 10</name>
+	</subject>
+	<subject>
+		<nr>3</nr>
+		<name>Count to 20</name>
+	</subject>
+	<subject>
+		<nr>4</nr>
+		<name>Substracting to 10</name>
+	</subject>
+</theme>
+<theme>
+	<nr>2</nr>
+	<name>Multiplications</name>
+	<subject>
+		<nr>1</nr>
+		<name>Table of multiplication of 10</name>
+	</subject>
+</theme>
+</themes>

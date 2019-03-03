@@ -7,7 +7,9 @@
 
 <div class="container-fluid">
 <!-- Knop met voortgang van de oefenreeksen -->
-
+<div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
 <!-- Leerlijn en positie van de lerende binnen de leerlijn-->
 
 <!-- 
