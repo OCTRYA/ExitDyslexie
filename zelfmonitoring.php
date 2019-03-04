@@ -67,7 +67,7 @@
 </div>
 
 
-  <script src="js/selfmonitoringtool/js.js"></script>  
+  <script src="js/selfmonitoringtool/selfmonitoringtool.js"></script>  
 
 
 

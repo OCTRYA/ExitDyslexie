@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Reboot Education</a>
+          <a class="navbar-brand" href="index.php"><span><img src="images/logo.png" style="width:20px"></span>&nbsp;<span style="font-size:14px">math</span></br>FourNotFive</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">

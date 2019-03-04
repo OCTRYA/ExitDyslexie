@@ -100,7 +100,7 @@ function makeSelfMonitoringDocument(){
 	 
 	
 
-	doc.save('Test.pdf');
+	doc.save('zelfmonitoring.pdf');
 }
 
 
