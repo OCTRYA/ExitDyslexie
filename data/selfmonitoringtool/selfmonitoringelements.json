@@ -1,0 +1,143 @@
+{
+"selfmonitoringLists":{
+	"dutchList" : {
+		"abbreviation":"nl",
+		"originalLanguage":"Nederlands",
+		"categories":[
+		{
+			"name":"Na school",
+			"elements":[
+				{	"name":"Ik controleer mijn agenda"
+				},
+				{
+					"name":"Mijn cursussen van de dag zijn in orde"
+				},
+				{
+					"name":"Mijn huiswerk is gemaakt"
+				},
+				{
+					"name":"Ik heb mijn lessen geleerd"
+				},
+				{
+					"name":"Mijn boekentas is gemaakt"
+				},
+				{
+					"name":"Mijn werkplaats is opgeruimd"
+				}
+			]
+		},
+		{
+			"name":"Voor het begin van de les",
+			"elements":[
+				{
+					"name":"Ik heb mijn lesmateriaal uitgehaald"
+				},
+				{
+					"name":"Ik weet waar de les over zal gaan"
+				},
+
+				{
+					"name":"Ik zit recht"
+				}
+			]
+		},
+		{
+			"name":"Tijdens de les",
+			"elements":[
+				{
+					"name":"Ik luister aandachtig naar de leerkracht"
+				},
+				{
+					"name":"Ik zit recht"
+				},
+				{
+					"name":"Ik steek mijn hand op bij een vraag"
+				},
+				{
+					"name":"Ik pruts niet met materiaal op mijn bank"
+				},
+				{
+					"name":"Ik maak de werkopdrachten in de klas"
+				}
+			]
+		},
+		{
+			"name":"Na de les",
+			"elements":[
+				{
+					"name":"Ik berg mijn schoolboeken netjes weg"
+				},
+				{
+					"name":"Mijn agenda is correct ingevuld"
+				}
+			]
+		},
+		{
+			"name":"Voor ik naar huis ga",
+			"elements":[
+				{
+					"name":"Mijn werkbank ik ordelijk en proper"
+				},
+				{
+					"name":"Ik heb al het materiaal voor mijn huistaken mee"
+				}
+			]
+		},
+		{
+			"name":"Tijdens een schrijfopdracht",
+			"elements":[
+				{
+					"name":"Ik zit recht"
+				},				
+				{
+					"name":"Mijn hand ligt op mijn blad"
+				},
+				{
+					"name":"Ik vorm de letters op de aangeleerde manier"
+				},
+				{
+					"name":"Ik schrijf altijd mooi tussen de schrijflijnen"
+				},
+				{
+					"name":"Ik lees mijn opdracht goed"
+				},
+				{
+					"name":"Ik controleer mijn opdracht"
+				},
+				{
+					"name":"Ik neem het schrijfmateriaal op de juiste manier beet"
+				}
+			]
+		},
+		{
+			"name":"Studeren en studieplanning",
+			"elements":[
+				{
+					"name":"Mijn bureau is opgeruimd"
+				},				
+				{
+					"name":"Ik heb mij aan mijn planning gehouden"
+				},
+				{
+					"name":"Ik heb mijn smartphone uit op stil"
+				},
+				{
+					"name":"Ik heb mijn smartphone uit mijn studeerruimte gelegd"
+				},
+				{
+					"name":"Ik weet duidelijk welk onderwerp ik wil studeren"
+				},
+				{
+					"name":"Ik kan het gestudeerde onderwerp linken met wat ik al weet"
+				}
+			]
+		}
+		]
+		
+	}
+
+}
+
+}	
+	
+

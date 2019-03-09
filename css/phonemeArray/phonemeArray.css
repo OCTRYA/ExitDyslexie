@@ -1,0 +1,11 @@
+#phonemeSlider-handle {
+    width: 3em;
+    height: 2em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+  }
+  
+  #phonemeSlider{margin-top:20px;margin-bottom:40px;}
+  

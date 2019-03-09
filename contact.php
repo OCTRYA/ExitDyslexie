@@ -6,39 +6,44 @@ require_once 'header.php';
 ?>
 
 
-<div class="container">
+<div class="contactContainer">
 
 <div class="form-sec">
 
-  
+<div class="row">
+<div class="col-sm-6"> 
  <form name="qryform" id="qryform" method="post" action="mail.php" onsubmit="return(validate());" novalidate="novalidate">
    <h4>Contact form</h4>
       <div class="form-group">
-      <label>Name:</label>
-      <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+      <label>Naam:</label>
+      <input type="text" class="form-control" id="name" placeholder="Geef een naam in" name="name">
     </div>
     <div class="form-group">
       <label>Email:</label>
-      <input type="email" class="form-control" id="name" placeholder="Enter Email" name="email">
+      <input type="email" class="form-control" id="name" placeholder="Geef een Emailadres in" name="email">
     </div>
     
     <div class="form-group">
-      <label>Phone No.:</label>
-      <input type="text" class="form-control" id="phone" placeholder="Enter Phone no." name="phone">
+      <label>Telefoon:</label>
+      <input type="text" class="form-control" id="phone" placeholder="Geef een telefoonnummer in" name="phone">
     </div>
 	<div class="form-group">
-      <label>Subject:</label>
-      <input type="text" class="form-control" id="name" placeholder="Subject" name="subject">
+      <label>Onderwerp:</label>
+      <input type="text" class="form-control" id="name" placeholder="Geef een onderwerp in" name="subject">
     </div>
 	 
 	<div class="form-group">
-      <label>Issues/query:</label>
-      <textarea name="issues" class="form-control" id="iq" placeholder="Enter your Issues/query"></textarea>
+      <label>Omschrijving:</label>
+      <textarea name="issues" class="form-control" id="iq" placeholder="Omschrijf uw suggestie, opmerking of probleem hier"></textarea>
     </div>
 	
     
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
+  </div> 
+  <div class="col-sm-6">
+  </div>
+  </div>
   </div>
   </div>
  <?php

@@ -22,6 +22,7 @@ H4 {
 	color:orange;
 }
 
+.form-group label {color: white}
 
 a:link {
   color: #057aff; 
@@ -59,8 +60,8 @@ ul{list-style-type: circle; }
 }
 
 .contactContainer {
-  			/* The image used */
-	background-image:url('../images/bg.jpg');
+  	/* The image used */
+	background-image:url('../images/blackboard-light.jpeg');
 	/* Full height */
 	height: 100%;
 	/* Center and scale the image nicely */
@@ -119,3 +120,9 @@ box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
  }
 
 #startTrajectButton{text-align:center}
+
+.navbar{margin:-10px}
+.toolInformation{border: 2px dashed orange; padding:3px;}
+
+.checkboxButton{background-color:orange}
+

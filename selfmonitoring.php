@@ -7,12 +7,12 @@
 <link rel="stylesheet" href="css/selfmonitoringtool/css.css"/>
     <script type="text/javascript" src="js/jsPDF/dist/jspdf.debug.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.0.16/jspdf.plugin.autotable.js"></script>
-<div class="container-fluid">
+<div class="container-fluid background">
 
     <h2>Zelfmonitoringtool</h2>
-    <p> Selecteer hieronder de elementen die je wil gebruiken om een zelfevaluatieformulier voor een leerling te maken</p>
-    
-    <div class="dropdown">
+    <p class="toolInformation"> Selecteer hieronder de elementen die je wil gebruiken om een zelfevaluatieformulier voor een leerling te maken. Indien u de voor u gepaste elementen niet terugvindt dan kan u steeds zelf uw eigen suggesties toevoegen</p>
+   
+    <div class="dropdown row">
           <button class="dropbtn">Selecteer een checklist</button>
           <div id="selfMonitoringCategoryMenu"class="dropdown-content">
           </div>
@@ -21,7 +21,7 @@
 		<div id="selfMonitorElementGroup" ondrop="dropElement(event)" ondragover="allowDropElement(event)" class="col-sm-3">
 			
 		</div>
-		<div class="col-sm-1">
+		<div class="col-sm-1" style="height:400px; background-image:url('images/pijlen_klein.png')">
 		
 		</div>
 		<div id="selfMonitorElementSelectionGroup" ondrop="dropElement(event)" ondragover="allowDropElement(event)" class="col-sm-4">
