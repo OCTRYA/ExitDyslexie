@@ -38,7 +38,10 @@
              	<button id="makePhonemeSequenceButton" class="btn btn-success">Maak de foneemreeks</button>    
              </fieldset>
       	</div>
+ 		<div id="phonemeListContainer" class="col-sm-8">
  		
+ 		
+ 		</div>
 	</div>
 </div>
 

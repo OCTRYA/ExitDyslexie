@@ -9,7 +9,7 @@ function init(){
 		  dataType: 'json',
 		  async: false,
 		  success: function(data) {
-			  selfmonitoring = data.selfmonitoringLists["dutchList"];
+			  selfmonitoring = data.selfmonitoringLists[dutchList];
 		  }
 		});
 	makeSelfmonitoringsMenu();
