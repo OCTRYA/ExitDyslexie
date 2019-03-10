@@ -5,11 +5,11 @@ $(document).ready(init());
 
 function init(){
 	$.ajax({
-		  url: "json/selfmonitoringtool/selfmonitoringelements.json",
+		  url: "data/selfmonitoringtool/selfmonitoringelements.json",
 		  dataType: 'json',
 		  async: false,
 		  success: function(data) {
-			  selfmonitoring = data.selfmonitoringLists[dutchList];
+			  selfmonitoring = data.selfmonitoringLists["dutchList"];
 		  }
 		});
 	makeSelfmonitoringsMenu();

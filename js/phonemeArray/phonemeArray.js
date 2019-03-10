@@ -201,8 +201,8 @@ function shuffleArray(array) {
 	var year = currentDate.getFullYear()
 	doc.text(180,5,day + "/" + month + "/" + year);
 	doc.addImage(imgData, 'JPEG', 0, 0, 36, 32);
+	
 	doc.setFontSize(30);
-
 	doc.text(50, 30, 'WOORDENREEKSEN');
 	
 	doc.setProperties({
@@ -221,7 +221,7 @@ function shuffleArray(array) {
 	
 		doc.line(20, 40, 160, 40); // horizontal line
 
-    
+		doc.setFontSize(15);
     var row =35;
 	for(var phonemeArrayElement=0; phonemeArrayElement<amountOfExercises; phonemeArrayElement++ ){
 	
